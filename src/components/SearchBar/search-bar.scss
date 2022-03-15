@@ -1,0 +1,28 @@
+@import '../../colors.scss';
+
+.search-box {
+  width: min-content;
+  position: relative;
+  margin-right: 100px;
+  
+  input {
+    border-radius: 100px;
+    width: 695px;
+    height: 48px;
+    background-color: $pale-white;
+    border-color: transparent;
+    outline: none;
+    padding-left: 50px;
+    font-size: 15px;
+
+    &::placeholder{
+      color: $text-lighter;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 15px;
+    left: 27px;
+  }
+}

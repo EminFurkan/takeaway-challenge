@@ -1,3 +1,9 @@
+import { Header } from './components/Header/Header';
+
 export const App = () => {
-  return (<div>hi</div>)
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
