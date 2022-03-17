@@ -1,4 +1,4 @@
-export const Star = () => {
+export const Heart = () => {
   return (
     <svg
       viewBox="0 0 24 24"

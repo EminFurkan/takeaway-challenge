@@ -1,0 +1,62 @@
+@import '../../colors.scss';
+@import '../../styles.scss';
+
+.card {
+  width: 250px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 20px;
+  position: relative;
+  border: 1px solid transparent;
+  
+  &:hover {
+    border-color: $text-lightest;
+
+    .favorite-btn-wrapper{
+      visibility: visible;
+    }
+  }
+
+  img {
+    width: 200px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+
+  .title {
+    color: $text-regular;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 15px 0;
+  }
+
+  .favorite-btn-wrapper {
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    svg {
+      height: 25px;
+      width: 25px;
+      fill: $text-lightest;
+    }
+  }
+
+  .details-btn {
+    @include btn-primary(100%, 32px);
+  }
+}
