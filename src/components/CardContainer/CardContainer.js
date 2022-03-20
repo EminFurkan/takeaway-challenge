@@ -6,7 +6,7 @@ import { getInitialResults } from '../../actions/resultActions';
 
 export const CardContainer = () => {
   const dispatch = useDispatch();
-  const { results } = useSelector(state => state.results);
+  const results = useSelector(state => state.results);
 
   useEffect(() => {
     dispatch(getInitialResults());
@@ -15,7 +15,7 @@ export const CardContainer = () => {
   return (
     <section className='card-container'>
       {results ?
-      results.map(drink => <Card key={drink.idDrink} title={drink.strDrink} image={drink.strDrinkThumb} />) : <></>
+      results.map(drink => <Card key={drink.idDrink} id={drink.idDrink} title={drink.strDrink} image={drink.strDrinkThumb} />) : <></>
       }
     </section>
   )

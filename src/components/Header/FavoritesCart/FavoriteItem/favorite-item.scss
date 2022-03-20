@@ -1,0 +1,29 @@
+@import '../../../../colors.scss';
+@import '../../../../styles.scss';
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid $text-lightest;
+  height: 50px;
+  padding: 5px;
+  border-radius: 2px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .title {
+    font-size: 12px;
+    font-weight: 600;
+    color: $brand-primary-regular;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 188px;
+    height: 15px;
+    text-overflow: ellipsis;
+  }
+
+  .remove-btn {
+    @include btn-circle($brand-accent-light)
+  }
+}

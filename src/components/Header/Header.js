@@ -1,16 +1,14 @@
 import './header.scss';
 import { Logo } from '../../assets/Logo';
-import { SearchBar } from '../SearchBar/SearchBar';
+import { SearchBar } from './SearchBar/SearchBar';
+import { FavoritesCart } from './FavoritesCart/FavoritesCart';
 
 export const Header = () => {
   return (
     <nav>
       <Logo />
       <SearchBar />
-      <div className='favorites'>
-        <span className='counter'>{0}</span>
-        Favorites
-      </div>
+      <FavoritesCart />
     </nav>
   )
 }

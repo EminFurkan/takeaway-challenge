@@ -1,0 +1,71 @@
+@import '../../../colors.scss';
+@import '../../../styles.scss';
+
+.favorites {
+  position: relative;
+
+  &.active {
+    .favorites-btn{
+      background-color: $pale-white;
+      color: $brand-primary-regular;
+      border: 1px solid #d7d7d7;
+    }
+    .counter {
+      background-color: $brand-primary-regular;
+      color: $pale-white;
+      border: 1px solid $pale-white;
+    }
+    .white-space{
+      visibility: visible;
+    }
+  }
+  
+  .white-space {
+    visibility: hidden;
+    background-color: $pale-white;
+    width: 118px;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-right: 1px solid #d7d7d7;
+    z-index: 2;
+  }
+
+  .favorites-btn {
+    @include btn-secondary(118px, 48px, #fff);
+    font-size: 17px;
+  }
+
+  .counter {
+    background-color: #fff;
+    position: absolute;
+    left: 106px;
+    bottom: 37px;
+    color: $brand-primary-regular;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .favorites-list {
+    width: 300px;
+    height: 400px;
+    background-color: $pale-white;
+    border: 1px solid $text-lightest;
+    border-radius: 4px;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    overflow-y: auto;
+    z-index: 1;
+  }
+}

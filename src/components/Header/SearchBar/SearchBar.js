@@ -2,8 +2,8 @@ import { useState, useCallback } from 'react';
 import { debounce } from 'lodash';
 import { useDispatch } from 'react-redux'
 
-import { getResults } from '../../actions/resultActions'; 
-import { SearchIcon } from '../../assets/SearchIcon';
+import { getResults } from '../../../actions/resultActions'; 
+import { SearchIcon } from '../../../assets/SearchIcon';
 import './search-bar.scss';
 
 export const SearchBar = () => {

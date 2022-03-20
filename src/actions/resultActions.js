@@ -19,8 +19,6 @@ export const getResults = (query) => async (dispatch, getState) => {
 export const getInitialResults = () => async (dispatch, getState) => {
   try {    
     const cocktails = await axios.get(INITIAL_QUERY);
-
-    console.log(cocktails)
   
     dispatch({
       type: 'GET_INITIAL_RESULTS',

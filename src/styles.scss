@@ -39,3 +39,30 @@ body {
     background-color: $brand-accent-light;
   }
 }
+
+@mixin btn-secondary($width, $height, $color) {
+  width: $width;
+  height: $height;
+  border: 1px solid;
+  border-color: $color;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 2px;
+  background-color: transparent;
+  color: $color;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+@mixin btn-circle($color) {
+  @include btn-primary(25px, 25px);
+  border: 1px solid $color;
+  border-radius: 50%;
+  color: $color;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+}

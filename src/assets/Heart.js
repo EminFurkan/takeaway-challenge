@@ -1,6 +1,7 @@
-export const Heart = () => {
+export const Heart = ({ style }) => {
   return (
     <svg
+      style={style}
       viewBox="0 0 24 24"
       width="1em"
       height="1em"
