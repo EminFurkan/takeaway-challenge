@@ -1,6 +1,6 @@
 import './card.scss';
 import { Heart } from '../../assets/Heart';
-import { addToFavorites } from '../../actions/favoriteActions';
+import { addToFavorites, removeFromFavorites } from '../../actions/favoriteActions';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const Card = ({ id, title, image }) => {
@@ -8,7 +8,12 @@ export const Card = ({ id, title, image }) => {
   const favorites = useSelector(state => state.favorites);
 
   const handleFavorite = () => {
-    dispatch(addToFavorites({ id, title, image }));
+    const foundFavorite = favorites.find(favorite => favorite.id === id);
+    if (foundFavorite) {
+      dispatch(removeFromFavorites(id));
+    } else {
+      dispatch(addToFavorites({ id, title, image }));
+    }
   }
 
   return (
