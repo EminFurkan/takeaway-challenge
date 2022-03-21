@@ -13,7 +13,7 @@ export const Filter = ({ filterBy, data }) => {
 
   const handleSearch = () => {
     if (query.length){
-      return data.filter(option => option[optionKeyMap[filterBy]].includes(query));
+      return data.filter(option => option[optionKeyMap[filterBy]].toLowerCase().includes(query.toLowerCase()));
     }
     return data;
   }
