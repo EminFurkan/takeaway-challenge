@@ -6,12 +6,12 @@
   border-radius: 2px;
   margin-top: 22px;
   margin-bottom: 26px;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   padding: 22px 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  grid-column-gap: 20px;
+  grid-column-gap: 5px;
   grid-row-gap: 5px;
 }

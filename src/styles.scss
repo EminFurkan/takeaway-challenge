@@ -66,3 +66,18 @@ body {
     background-color: transparent;
   }
 }
+
+@mixin custom-scrollbar($color) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background-color: $color; 
+    border-radius: 10px;
+  }
+}

@@ -4,11 +4,13 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { resultReducers } from './reducers/resultReducers';
 import { favoritesReducer } from './reducers/favoritesReducer';
+import { filterReducer } from './reducers/filterReducer';
 
 
 const reducer = combineReducers({
   favorites: favoritesReducer,
-  results: resultReducers
+  results: resultReducers,
+  filters: filterReducer
 });
 
 const middleware = [thunk];
