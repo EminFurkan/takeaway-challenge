@@ -29,14 +29,14 @@ body {
   font-size: 12px;
   font-weight: 500;
   border-radius: 2px;
-  background-color: $brand-accent-regular;
+  background-color: $brand-primary-regular;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
   outline: none;
 
   &:hover {
-    background-color: $brand-accent-light;
+    background-color: $brand-primary-dark;
   }
 }
 

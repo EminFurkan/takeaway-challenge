@@ -3,7 +3,8 @@
 
 .favorites {
   position: relative;
-
+  @include custom-scrollbar($text-lightest);
+  
   &.active {
     .favorites-btn{
       background-color: $pale-white;
@@ -31,12 +32,12 @@
     border-right: 1px solid #d7d7d7;
     z-index: 2;
   }
-
+  
   .favorites-btn {
     @include btn-secondary(118px, 48px, #fff);
     font-size: 17px;
   }
-
+  
   .counter {
     background-color: #fff;
     position: absolute;

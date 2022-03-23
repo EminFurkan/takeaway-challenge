@@ -1,5 +1,5 @@
 import { CATEGORY_LIST_QUERY, INGREDIENT_LIST_QUERY, GLASS_LIST_QUERY } from "../constants/endpoints";
-import { GET_FILTER_OPTIONS } from "../constants/cocktail.constants";
+import { GET_FILTER_OPTIONS, SET_ACTIVE_FILTERS } from "../constants/cocktail.constants";
 import axios from 'axios';
 
 export const getFilterOptions = () => async (dispatch, getState) => {
@@ -16,6 +16,17 @@ export const getFilterOptions = () => async (dispatch, getState) => {
         glasses: glasses.data.drinks
       }
     });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const setActiveFilters = (filters) => async (dispatch, getState) => {
+  try {
+    dispatch({
+      type: SET_ACTIVE_FILTERS,
+      payload: filters
+    })
   } catch (error) {
     console.log(error);
   }

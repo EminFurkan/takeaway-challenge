@@ -1,9 +1,17 @@
 import './filter.scss';
-import { Option } from './Option/Option';
-import { useState } from 'react';
+import Option from './Option/Option';
+import { useEffect, useMemo, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setActiveFilters } from '../../../actions/filterActions';
 
 export const Filter = ({ filterBy, data }) => {
   const [query, setQuery] = useState('');
+  const [selectedFilters, setSelectedFilters] = useState({
+    ingredients: [],
+    glasses: null,
+    categories: null
+  });
+  const dispatch = useDispatch();
 
   const optionKeyMap = {
     Ingredients: 'strIngredient1',
@@ -11,8 +19,13 @@ export const Filter = ({ filterBy, data }) => {
     Glasses: 'strGlass'
   }
 
+  useEffect(() => {
+    // dispatch(setActiveFilters(selectedFilters));
+    console.log(selectedFilters)
+  }, [selectedFilters])
+
   const handleSearch = () => {
-    if (query.length){
+    if (query.length) {
       return data.filter(option => option[optionKeyMap[filterBy]].toLowerCase().includes(query.toLowerCase()));
     }
     return data;
@@ -25,7 +38,7 @@ export const Filter = ({ filterBy, data }) => {
         <input type="text" placeholder={`Search ${filterBy}`} onChange={(e) => setQuery(e.target.value.trim())} />
         <div className="filter-options">
           {
-            handleSearch().map((option, index) => <Option key={index} text={option[optionKeyMap[filterBy]]} />)
+            handleSearch().map((option, index) => <Option key={index} text={option[optionKeyMap[filterBy]]} setSelectedFilters={setSelectedFilters} filterBy={filterBy} selectedFilters={selectedFilters} />)
           }
         </div>
       </div>
