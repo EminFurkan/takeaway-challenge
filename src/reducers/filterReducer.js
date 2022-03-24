@@ -20,10 +20,12 @@ export const filterReducer = (
   switch (action.type) {
     case GET_FILTER_OPTIONS:
       return {
+        ...state,
         filterOptions: action.payload
       }
     case SET_ACTIVE_FILTERS:
       return {
+        ...state,
         activeFilters: action.payload
       }
     default:
