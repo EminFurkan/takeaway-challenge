@@ -22,7 +22,6 @@ export const getFilterOptions = () => async (dispatch, getState) => {
 }
 
 export const setActiveFilters = (filters) => async (dispatch, getState) => {
-  console.log(filters)
   try {
     dispatch({
       type: SET_ACTIVE_FILTERS,

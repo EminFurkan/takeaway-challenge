@@ -5,12 +5,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { resultReducers } from './reducers/resultReducers';
 import { favoritesReducer } from './reducers/favoritesReducer';
 import { filterReducer } from './reducers/filterReducer';
+import { modalReducer } from './reducers/modalReducer';
 
 
 const reducer = combineReducers({
   favorites: favoritesReducer,
   results: resultReducers,
-  filters: filterReducer
+  filters: filterReducer,
+  modal: modalReducer
 });
 
 const middleware = [thunk];

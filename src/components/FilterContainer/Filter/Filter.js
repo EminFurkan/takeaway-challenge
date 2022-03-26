@@ -1,5 +1,5 @@
 import './filter.scss';
-import Option from './Option/Option';
+import { Option } from './Option/Option';
 import { useState } from 'react';
 
 export const Filter = ({ filterBy, data, setSelectedFilters, selectedFilters }) => {

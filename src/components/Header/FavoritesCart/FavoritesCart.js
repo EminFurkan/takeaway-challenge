@@ -26,7 +26,7 @@ export const FavoritesCart = () => {
           <div className='favorites-list'>
             {
               favorites.map(favorite =>
-                <FavoriteItem key={favorite.id} id={favorite.id} title={favorite.title} image={favorite.image} />
+                <FavoriteItem key={favorite.id} id={favorite.id} title={favorite.title} image={favorite.thumb} />
               )
             }
           </div>
