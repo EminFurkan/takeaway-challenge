@@ -32,8 +32,8 @@ export const Card = ({ id, title, thumb, instructions, tags }) => {
       <div className='title'>{title}</div>
       <div className='tags'>
         {tags ?
-          tags.replace(',', ' ').split(' ').map(tag => 
-            <div className='tag'>
+          tags.replace(',', ' ').split(' ').map((tag, i) => 
+            <div key={i} className='tag'>
               {tag}
             </div>
           ) : <></>

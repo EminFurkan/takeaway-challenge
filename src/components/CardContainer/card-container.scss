@@ -1,3 +1,5 @@
+@import '../../colors.scss';
+
 .card-container {
   width: 1111px;
   background: #FFFFFF;
@@ -10,4 +12,11 @@
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+
+  .no-results {
+    margin: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $text-lighter;
+  }
 }

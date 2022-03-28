@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 
   .modal-wrapper {
     background-color: $pale-white;
@@ -29,10 +30,13 @@
       color: $brand-primary-light;
     }
 
+    @include custom-scrollbar($brand-primary-light);
     .modal-content{
       display: flex;
       margin: 20px 0;
       width: 100%;
+      height: 100%;
+      overflow-y: auto;
 
       img {
         height: 120px;
@@ -51,7 +55,7 @@
   }
 
   button {
-    @include btn-primary(100px, 30px);
+    @include btn-primary(100px, 50px);
     margin-top: auto;
   }
 }

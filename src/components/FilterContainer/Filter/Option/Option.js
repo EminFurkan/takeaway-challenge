@@ -4,13 +4,18 @@ import { Checkmark } from '../../../../assets/Checkmark';
 export const Option = ({ text, filterBy, setSelectedFilters, selectedFilters }) => {
 
   const handleCheckedOption = (e) => {
-    const checkedOptionElement = [...document.getElementsByClassName("checked")];
-    console.log(checkedOptionElement);
-    checkedOptionElement[0]?.classList.remove("checked");
-
     const currentCheckedOption = e.currentTarget;
-    console.log(currentCheckedOption);
-    currentCheckedOption.classList.add('checked');
+
+    if (currentCheckedOption.classList.value.includes('checked')){
+      currentCheckedOption.classList.remove('checked');
+    } else {
+      currentCheckedOption.classList.add('checked');
+    }
+
+    if (filterBy !== 'Ingredients'){
+      const checkedOptionElement = [...document.getElementsByClassName("checked")];
+      checkedOptionElement[0]?.classList.remove("checked");
+    }
 
     if (filterBy === 'Ingredients') {
       if (selectedFilters.ingredients.includes(text)) {
