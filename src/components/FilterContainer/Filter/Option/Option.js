@@ -12,10 +12,10 @@ export const Option = ({ text, filterBy, setSelectedFilters, selectedFilters }) 
       currentCheckedOption.classList.add('checked');
     }
 
-    if (filterBy !== 'Ingredients'){
-      const checkedOptionElement = [...document.getElementsByClassName("checked")];
-      checkedOptionElement[0]?.classList.remove("checked");
-    }
+    // if (filterBy !== 'Ingredients'){
+    //   const checkedOptionElements = [...document.getElementsByClassName("checked")];
+    //   checkedOptionElements[0]?.classList.remove("checked");
+    // }
 
     if (filterBy === 'Ingredients') {
       if (selectedFilters.ingredients.includes(text)) {
